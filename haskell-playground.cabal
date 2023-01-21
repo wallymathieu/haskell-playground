@@ -48,7 +48,7 @@ cabal-version:       >=1.10
 
 library
   -- Modules exported by the library.
-  exposed-modules:     Lenses
+  exposed-modules:     Lenses, AesonLenses
   
   -- Modules included in this library but not exported.
   -- other-modules:       
@@ -57,7 +57,7 @@ library
   -- other-extensions:    
   
   -- Other library packages from which modules are imported.
-  build-depends:       base >=4.13 && <4.14, lens, containers
+  build-depends:       base >=4.13, lens, containers, aeson, lens-aeson, vector, bytestring, text
 
   -- Directories containing source files.
   -- hs-source-dirs:      
