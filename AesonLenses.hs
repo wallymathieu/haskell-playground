@@ -21,12 +21,23 @@ import qualified Data.Vector as Vector
 :set -XOverloadedStrings
 --}
 
-nullString = "null" ^?  _String
+-- nullString :: Maybe Text
+-- nullString = "null" ^?  _String
 -- Nothing
-someString = "\"something\"" ^?  _String
+
+-- someString :: Maybe Text
+-- someString = "\"something\"" ^?  _String
 -- "something"
-nullNumber = "null" ^?  _Number
+
+-- nullNumber = "null" ^?  _Number
 -- Nothing
-someNumber = "3456" ^?  _Number
+
+-- someNumber = "3456" ^?  _Number
 -- Just 3456.0
 
+-- "{\"a\": null, \"b\": true}" ^? key "a"
+-- Just Null
+-- "{\"a\": undefined, \"b\": true}" ^? key "a"
+-- Nothing
+-- "{\"b\": true}" ^? key "a"
+-- Nothing
